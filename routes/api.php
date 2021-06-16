@@ -2,6 +2,8 @@
 
 use Illuminate\Http\request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\API\CompanyController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,14 +19,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/', function () {
-    return config('app.url') . 'date:' . now();
-});
-Route::get('home', function () {
-    return 'Hello home';
-});
-Route::get('staff/{id}', function ($id) {
-    return 'Hello staff ' . $id;
-});
+Route::get('/', [CompanyController::class,'index']);
+
+Route::get('staff/{id}', [CompanyController::class,'show']);
+
+
 
 
