@@ -3,7 +3,7 @@
 use Illuminate\Http\request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\CompanyController;
-
+use App\Http\Controllers\API\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +22,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/', [CompanyController::class,'index']);
 
 Route::get('staff/{id}', [CompanyController::class,'show']);
+
+Route::apiResource('/product', ProductController::class);
 
 
 

@@ -14,7 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        return 'protect';
     }
 
     /**
@@ -36,7 +36,13 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        $product = [
+            'id' =>$id,
+            'name' => 'Coke'
+
+        ];
+
+        return response()->json($product, 200);
     }
 
     /**
