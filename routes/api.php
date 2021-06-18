@@ -27,7 +27,7 @@ Route::get('staff/{id}', [CompanyController::class,'show']);
 
 Route::apiResource('/product', ProductController::class);
 
-oute::apiResource('/department', DepartmentController::class);
+Route::apiResource('/department', DepartmentController::class);
 
 
 
