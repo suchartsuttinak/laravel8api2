@@ -3,7 +3,9 @@
 use Illuminate\Http\request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\CompanyController;
+use App\Http\Controllers\API\DepartmentController;
 use App\Http\Controllers\API\ProductController;
+use App\Models\Department;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +26,9 @@ Route::get('/', [CompanyController::class,'index']);
 Route::get('staff/{id}', [CompanyController::class,'show']);
 
 Route::apiResource('/product', ProductController::class);
+
+oute::apiResource('/department', DepartmentController::class);
+
 
 
 
