@@ -29,6 +29,7 @@ Route::apiResource('/product', ProductController::class);
 
 Route::apiResource('/department', DepartmentController::class);
 
+Route::get('/search/department',[DepartmentController::class,'search']);
 
 
 
