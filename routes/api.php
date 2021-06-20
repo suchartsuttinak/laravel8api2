@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\CompanyController;
 use App\Http\Controllers\API\DepartmentController;
 use App\Http\Controllers\API\ProductController;
+use App\Http\Controllers\OfficerController;
 use App\Models\Department;
 
 /*
@@ -30,6 +31,9 @@ Route::apiResource('/product', ProductController::class);
 Route::apiResource('/department', DepartmentController::class);
 
 Route::get('/search/department',[DepartmentController::class,'search']);
+
+Route::apiResource('/officer', OfficerController::class);
+
 
 
 
