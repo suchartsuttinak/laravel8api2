@@ -14,8 +14,10 @@ class OfficerController extends Controller
      */
     public function index()
     {
+        $of = Officer::with(['department:id,name'])->get();
+
         return response()->json([
-            'data' => 'data'
+            'data' => $of
         ], 200);
     }
 
