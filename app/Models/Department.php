@@ -11,7 +11,7 @@ class Department extends Model
 
     protected $table = 'departments';
 
-    public function officer(){
+    public function officers(){
 
           //  return $this->hasMany(Officer::class);
             return $this->hasMany(Officer::class, 'department_id', 'id');
