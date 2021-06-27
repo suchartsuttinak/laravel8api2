@@ -14,7 +14,9 @@ class Officer extends Model
 
   //  เพิ่ม geter ไปยัง jasan
 
-    protected $appends = ['fullname', 'age'];
+    protected $appends = ['fullname', 'age', 'picture_url'];
+
+    protected $hidden = ['picture'];
 
     public function getFullnameAttribute(){
         return $this->firstname . ' ' . $this->lastname;
@@ -24,6 +26,11 @@ class Officer extends Model
         return now()->diffInYears($this->dob);
 
     }
+    public function getPictureUrlAttribute(){ //picture_url
+        return asset('storage/upload') . '/' . $this->picture;
+
+    }
+
 
 
 
